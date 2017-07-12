@@ -1,0 +1,421 @@
+    1  mkdir git_immersion
+    2  git config --global user.name "Dennis Daubney Jr
+    3  git config core.autocrlf input
+    4  clear
+    5  git config --global core.autocrlf input
+    6  exit
+    7  cd
+    8  XECUTE:
+    9  git config --global core.autocrlf input
+   10  git config --global core.safecrlf true
+   11  XECUTE:
+   12  git config --global core.autocrlf input
+   13  git config --global core.safecrlf true
+   14  git config --global core.autocrlf input
+   15  git config --global core.safecrlf true
+   16  mkdir hello
+   17  cd hello
+   18  touch hello.rb 
+   19  echo "Hello, World" >> hello.rb
+   20  git init
+   21  git add hello.rb
+   22  git commit -m "First Commit"
+   23  git status
+   24  cat hello.rb
+   25  vi hello.rb
+   26  cd hello
+   27  cat hello.rb
+   28  vi hello.rb
+   29  rm hello
+   30  cd hello
+   31  cat hello.rb
+   32  git init
+   33  git status
+   34  git add
+   35  git add .
+   36  git status
+   37  cd ..
+   38  mkdir hello1
+   39  cd hello1
+   40  touch hello.rb
+   41  echo "Hello, World" hello.rb
+   42  echo "Hello, World" hello1.rb
+   43  cat hello.rb
+   44  ech "Hello, World" >> hello.rb
+   45  echo "Hello, World" >> hello.rb
+   46  git init
+   47  git status
+   48  git add hello.rb
+   49  git commit -m "First Commit"
+   50  git status
+   51  ..
+   52  mkdir archive
+   53  mv hello* archive
+   54  mv hello1 ..
+   55  mv hello ..
+   56  mv hello* ..
+   57  mv hello* ./
+   58  mv hello* .
+   59  mk dir hello
+   60  mkdir hello
+   61  cd hello
+   62  ls
+   63  touch hello.rb
+   64  ls
+   65  echo "Hello, World" >> hello.rb
+   66  cat hello.rb
+   67  git init
+   68  git add hello.rb
+   69  git commit -m 
+   70  git commit -m "First Commit"
+   71  git status
+   72  vi hello.rb
+   73  git status
+   74  git add hello.rb
+   75  git status
+   76  git commit
+   77  git status
+   78  vi hello.rb
+   79  git add hello.rb
+   80  vi hello.rb
+   81  git status
+   82  git commit -m "Added a default value"
+   83  git status
+   84  git add .
+   85  git status
+   86  git commit -m "Added a comment"
+   87  git log
+   88  git log --pretty=oneline
+   89  git log --pretty=oneline --max-count=2
+   90  git log --pretty=oneline --since='5 minutes ago'
+   91  git log --pretty=oneline --until='5 minutes ago'
+   92  git log --pretty=oneline --author=<Dennis Daubney Jr>
+   93  git log --pretty=oneline --all
+   94  git log --all --pretty=format '%h %cd %s (%an)' --since='7 days ago'
+   95  git log --all --pretty=format:'%h %cd %s (%an)' --since='7 days ago'
+   96  git log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+   97  git config
+   98  ..
+   99  ls
+  100  cd workspace
+  101  git config --global
+  102  git config --edit
+  103  vi git config
+  104  ls -la ../..
+  105  ls -la
+  106  cd hello
+  107  ls -la
+  108  git config --global --edit
+  109  cat git config --global
+  110  git st
+  111  git hist
+  112  git checkout <0e9c7df>
+  113  git co <0e9c7df>
+  114  git co 0e9c7df
+  115  cat hello.rb
+  116  git co master
+  117  cat hello.rb
+  118  vi hello.rb
+  119  git st
+  120  git co hello.rb
+  121  git status
+  122  cat hello.rb
+  123  vi hello.rb
+  124  git add hello.rb
+  125  git st
+  126  git reset HEAD hello.rb
+  127  git co hello.rb
+  128  git st
+  129  vi hello.rb
+  130  git add hello.rb
+  131  git ci -m "Oops, we didn't want this commit"
+  132  git revert HEAD
+  133  git hist
+  134  git tag oops
+  135  git hist
+  136  git reset --hard v1
+  137  git reset --hard oops
+  138  git hist
+  139  git reset --hard 50f8534
+  140  git hist
+  141  git hist --all
+  142  git tag -d oops
+  143  git hist --all
+  144  vi hello.rb
+  145  git add hello.rb
+  146  git ci -m "Add an author comment"
+  147  vi hello.rb
+  148  git add hello.rb
+  149  git ci --amend -m "Add an author/email comment"
+  150  git hist
+  151  mkdir lib
+  152  git mv hello.rb lib
+  153  git st
+  154  gem install rake
+  155  touch Rakefile
+  156  vi Rakefile
+  157  git add Rakefile
+  158  git ci -m "Added a Rakefile."
+  159  rake
+  160  ls -C .git
+  161  ls -C .git/objects
+  162  ls -C .git/objects/0e
+  163  cat .git/config
+  164  ls .git/refs
+  165  ls .git/refs/heads
+  166  ls .git/refs/tags
+  167  cat .git/refs/tags/v1
+  168  cat .git/refs/tags/oops
+  169  cat .git/HEAD
+  170  git hist --max-count=1
+  171  git cat-file -t 1daed33
+  172  git cat-file -p 1daed33
+  173  git cat-file -p a612bccce611f240d2d9eb71252cc7d71cadd2fd
+  174  git cat-file -p 040000
+  175  git cat-file -p 6011e0ce0375e5c431b3a139aca51243f56635ad
+  176  git cat-file -p 161927f37c63e8c935c4958b638fb6cb378f5958
+  177  git hist
+  178  git cat-file -p 0e9c7df
+  179  git cat-file -p 8d745f3be01a812ae9ad6867cc313a8aaad14c87
+  180  git co -b greet
+  181  git st
+  182  touch lib/greeter.rb
+  183  vi greeter.rb
+  184  git add lib/greeter.rb
+  185  git ci -m "Added greeter class"
+  186  vi lib/hello.rb
+  187  git add lib/hello.rb
+  188  git ci -m "Hello uses Greeter"
+  189  vi Rakefile
+  190  git add Rakefile
+  191  git ci -m "Updated Rakefile"
+  192  git hist --all
+  193  git co master
+  194  cat lib/hello.rb
+  195  git co greet
+  196  cat lib/hello.rb
+  197  git co master
+  198  touch readme
+  199  vi readme
+  200  git add readme
+  201  git ci -m "Added readme"
+  202  git hist --all
+  203  git co greet
+  204  git merge master
+  205  git hist --all
+  206  /cd master
+  207  git co master
+  208  git remote add pushtest6-22-2017 git@github.com:MrOolong/testpush6-22-2017.git
+  209  git add .
+  210  git ci -m "Push Test 6-22-2017"
+  211  git push -u pushtest6-22-2017 master
+  212  ..
+  213  mkdir 6-22-2017_sample_assignment
+  214  unzip sample\ files.zip
+  215  unzip sample files.zip
+  216  unzip sample_files.zip
+  217  cd 6-22-2017_sample_assignment/
+  218  unzip sample_files.zip
+  219  ls -ll
+  220  git init
+  221  git hist
+  222  mkdir html
+  223  mkdir css
+  224  cd html
+  225  touch index.html
+  226  git add index.html
+  227  git ci -m "First Commit"
+  228  git st
+  229  cd .
+  230  cd ..
+  231  git add .
+  232  git ci -m "Added sample files to git"
+  233  git st
+  234  cd hmtl
+  235  cd html
+  236  git st
+  237  cat index.html
+  238  index.html -edit
+  239  index.html --edit
+  240  git st
+  241  git add index.html
+  242  git ci -m "Updated html file with multiple lines of code"
+  243  git st
+  244  cd css
+  245  cd ..
+  246  cd css
+  247  touch main.css
+  248  cd ..
+  249  cd html
+  250  git st
+  251  git add index.html
+  252  git ci -m "Updated index.html to ref css stylesheet"
+  253  git st
+  254  git add css/main.css
+  255  cd ..
+  256  cd css
+  257  git add main.css
+  258  git ci -m "Added CSS file"
+  259  git st
+  260  git hist
+  261  cd ..
+  262  cd html
+  263  git add index.html
+  264  git st
+  265  git ci -m "Added another hit song"
+  266  git st
+  267  cd..
+  268  git remote add origin git@github.com:MrOolong/6-22-2017_sample_assignment
+  269  git add .
+  270  git ci - "First Commit Upload to Repository"
+  271  git ci -m "First Commit Upload to Repository"
+  272  git push -u origin master
+  273  touch page1.html
+  274  git st
+  275  git add page1.html
+  276  git st
+  277  git ci -m "Added 2nd html page"
+  278  git st
+  279  git rm page1.html
+  280  git st
+  281  git hist
+  282  git tag v1
+  283  git hist
+  284  git co v1^
+  285  git tag v1-beta
+  286  git co v1
+  287  git co v1-beta
+  288  git tag
+  289  git hist master --all
+  290  git co -b html_branch
+  291  git st
+  292  touch page2.html
+  293  git add page2.html
+  294  git ci -m "Aadded Whitney Houston page"
+  295  git st
+  296  git co master
+  297  git co html_branch
+  298  git merge master
+  299  git hist --all
+  300  git add page2.html
+  301  git commit -m "Added Hit Song div"
+  302  git st
+  303  git co -b css
+  304  git st
+  305  git hist
+  306  rm page2.html
+  307  git ci -m "Deleted page2.html"
+  308  git st
+  309  git rm page2.html
+  310  git st
+  311  git ci -m "Deleted page2.html in css branch"
+  312  git st
+  313  git hist
+  314  git co master
+  315  git st
+  316  git push
+  317  git co html
+  318  git co css
+  319  git push
+  320  git co master
+  321  ls ll
+  322  ls -ll
+  323  git hist --all
+  324  git st
+  325  cd ..
+  326  git st
+  327  git co css
+  328  git st
+  329  git co master
+  330  git st
+  331  cd 62417_tributepage/
+  332  git st
+  333  git add css/main.css
+  334  git ci -m "main.css update"
+  335  git add html/index.html
+  336  git ci -m "update index.html"
+  337  git st
+  338  g
+  339  cd betafcc_productlanding/
+  340  git st
+  341  git add .
+  342  git st
+  343  git ci -m "added bootstrap.js and working on nav fix"
+  344  git st
+  345  git add .
+  346  git ci -m "updated css and index.html - toggle still broken"
+  347  git st
+  348  git push
+  349  git st
+  350  git hist
+  351  git st
+  352  c9 js/bootstrap.js
+  353  git st
+  354  git add .
+  355  git ci -m "toggle test"
+  356  git push
+  357  git st
+  358  git add index.html 
+  359  git ci -m "fixed toggle, contact link not spaced properly"
+  360  git push
+  361  git st
+  362  git add .
+  363  git st
+  364  git ci -m "fixed nav link space issue with workaround"
+  365  git st
+  366  git push
+  367  cd ..
+  368  cd testing/
+  369  mkdir github_branchtest
+  370  cd github_branchtest/
+  371  git init
+  372  touch indexA.html
+  373  touch todosA.js
+  374  c9 indexA.html 
+  375  git st
+  376  git add .
+  377  git st
+  378  git ci -m "initial commit"
+  379  git remote add origin git@github.com:MrOolong/github_branchtest.git
+  380  git push -u origin master
+  381  git st
+  382  git co -b v1
+  383  git st
+  384  git add indexA.html 
+  385  git ci -m "working on version 1"
+  386  git push
+  387  git st
+  388  git add .
+  389  git ci -m "Working on version 1"
+  390  git push
+  391  git st
+  392  git co master
+  393  git co v1
+  394  git st
+  395  git add indexA.html
+  396  git ci -m "More v1 work"
+  397  git st
+  398  git push
+  399  git co master
+  400  git co v1
+  401  git add indexA.html 
+  402  git ci -m "Finishing v1"
+  403  git push
+  404  git st
+  405  git log
+  406  git co 70ca823eee84d0e361980235d18231cb10c9a03a
+  407  git add indexA.html 
+  408  git ci -m "fixing v1"
+  409  git push
+  410  git co -b Fixing-v1
+  411  git st
+  412  git push
+  413  git co v1 
+  414  git co Fixing-v1
+  415  git co v1
+  416  git pull origin v1
+  417  git co master
+  418  git merge
+  419  git merge v1
+  420  git st
+  421  history > history.txt
